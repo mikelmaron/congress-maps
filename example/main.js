@@ -204,11 +204,11 @@ if (mapboxgl.supported({ failIfMajorPerformanceCaveat: true })) {
         }
 
         // Uncomment below to get individual district data 
-        // if (stateNum === '04') {
+        // if (stateNum === '23') {
         //   console.log(data[i])
-        //   if (data[i].District === 'AZ-04') {
-        //     console.log(data[i])            
-        //   }
+          // if (data[i].District === 'AZ-04') {
+          //   console.log(data[i])            
+          // }
         // }
 
         // Start by checking if it's a Senator or District 
@@ -485,7 +485,7 @@ if (mapboxgl.supported({ failIfMajorPerformanceCaveat: true })) {
         //
         // - - - - - - - - - - - -
 
-        if (state) {
+        if (district.properties.state) {
           selectionHeader.className = 'selected-container'
           selectionHeader.innerHTML = state_name + (districtNum !== 'Senate' ? ', district ' + districtNum : '');
         } else {
